@@ -4,10 +4,10 @@ library = {"The Hobbit": True, "1984": False, "Python Basics": True}
 
 def librarycheck(books):
     '''Shows you if the book is in the library'''
-    for title, status in books:
+    for status in books.values():
         if status == False:
             pass
     else:
-        print("Displaying: ", title)
+        print("Displaying: ", books.keys())
 
 librarycheck(library)
