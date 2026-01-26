@@ -2,6 +2,12 @@
 
 
 squares = [x**2 for x in range(5)]
+
+#same logic when creating a list
+list1 = []
+for x in range(5):
+    list1.append(x**2)
+    
 #--------------------------------------
 evens = [x for x in range(10) if x % 2 == 0]
 #--------------------------------------
