@@ -9,7 +9,7 @@ def checkreading(list_w_readings):
         if item <= 0:
             continue
     else:
-        newset.update(item)
+        newset = {item for item in list_w_readings}
     print(newset)
 
 checkreading(readings)
