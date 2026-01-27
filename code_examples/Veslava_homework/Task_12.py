@@ -4,6 +4,7 @@
 
 list1= [2, "cat", 3.0, 5, False]
 def clean_and_transform(listinsert):
-    newlist = ["even" if isinstance(x) and x % 2 ==0 else "odd" for x in listinsert]
+    newlist = [x for x in listinsert if isinstance(x, (float, int)) and not isinstance(x, bool)]
+    newlist = [x*x if x % 2 ==0 else x*10 for x in newlist]
     return newlist
 print(clean_and_transform(list1))
