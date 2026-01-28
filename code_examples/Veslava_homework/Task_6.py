@@ -8,8 +8,8 @@ def checkreading(list_w_readings):
     for item in list_w_readings:
         if item <= 0:
             continue
-    else:
-        newset = {item for item in list_w_readings}
+        else:
+            newset.add(item)
     print(newset)
 
 checkreading(readings)

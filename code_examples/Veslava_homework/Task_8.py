@@ -3,7 +3,7 @@
 
 #List comprehension
 prices = [100, 250, 45, 80, 120]
-discounted_prices = [x*0.9 if x > 100 else x for x in prices ]
+discounted_prices = [x*0.9 if x > 100 else x for x in prices]
 print(discounted_prices)
 
 #Dictionary comprehension
@@ -11,8 +11,11 @@ products = ['Laptop', 'Mouse', 'Monitor']
 stock = [5, 20, 10]
 
 #{key_expr: value_expr for item in iterable if condition}
-inventory = {products: stock for item in products}
+inventory = {item: item1 for item, item1 in zip(products,stock)} #tuple unpacking through for-loop using two temp variables(item, item2)
+print(inventory)
+print(list(zip(products, stock)))
 
 #Set comprehension
 fruit_string = "apple banana apple orange banana"
-unique_words = {x if len(x)>5 for x in fruit_string}
+unique_words = {x for x in fruit_string.split() if len(x)>5}
+print(unique_words)
