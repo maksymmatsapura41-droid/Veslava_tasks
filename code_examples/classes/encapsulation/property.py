@@ -4,7 +4,7 @@ class Tree:
 
    @property
    def height(self):
-       print("getter")
+       # self.indim = self.some_method()
        return self.__height
 
    @height.setter
